@@ -1,0 +1,13 @@
+.mat-list-base.repo-list {
+  overflow: auto;
+  height: calc(#{$full-h-view} - #{$header-height} - #{$paginator-height});
+}
+
+mat-list-item {
+  height: auto !important;
+}
+
+
+.mat-list-text {
+  margin: 10px !important;
+}
