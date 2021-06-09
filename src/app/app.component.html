@@ -1,0 +1,16 @@
+<!-- Top Page -->
+<div id="top"></div>
+
+<!-- Content -->
+<div class="wrapper" role="main">
+  <!-- Header -->
+  <gitbase-header></gitbase-header>
+  <!-- Viewer -->
+  <gitbase-viewer>
+    <!-- Repo List -->
+    <gitbase-repo-list [repos]="items" [reposCount]="reposCount" [currentPageIndex]="(options?.page ?? 0) - 1" [pageSize]="options?.per_page" (changePage)="pageChange.setValue($event)"></gitbase-repo-list>
+  </gitbase-viewer>
+</div>
+
+<!-- Bottom Page -->
+<div id="bottom"></div>
