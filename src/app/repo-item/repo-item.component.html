@@ -1,0 +1,30 @@
+<!-- Repo Item view -->
+<mat-list-item *ngIf="repo">
+  <img matListAvatar loading="lazy" [src]="repo.owner.avatar_url" [alt]="repo.name"/>
+  <div mat-line>{{repo.name}}</div>
+  <div mat-line>{{repo.description}}</div>
+  <div mat-line fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="start center">
+    <!-- Stars -->
+    <span id="stars">
+      {{'Stars: ' + (repo.stargazers_count ? (repo.stargazers_count | number) : 0)}}
+    </span>
+    <!-- open issues -->
+    <a class="link--muted" [href]="getUrlIssue(repo.issues_url)" target="_blank">
+      <span>{{'Issues: ' + repo.open_issues_count}}</span>
+    </a>
+
+   <!-- Updated at -->
+    <span id="submitted">
+      {{'Submitted ' + getUpdatedDays(repo.updated_at) + ' days ago by ' + repo?.owner?.login ?? ''}}
+    </span>
+    <!-- license -->
+    <span *ngIf="repo.license">{{repo.license.name}}</span>
+    <!-- language -->
+    <span *ngIf="repo.language">
+      <mat-chip-list [selectable]="false">
+        <mat-chip [disableRipple]="true" [selectable]="false">{{repo.language}}</mat-chip>
+      </mat-chip-list>
+    </span>
+  </div>
+  <ng-content></ng-content>
+</mat-list-item>

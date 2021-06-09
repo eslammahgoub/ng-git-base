@@ -1,0 +1,11 @@
+<!-- Repositories -->
+<mat-list cdkScrollable class="repo-list" #repoList>
+  <!-- repo search result counts -->
+  <div mat-subheader>{{(reposCount | number) + ' repository results'}}</div>
+  <!-- List of the repo -->
+  <gitbase-repo-item *ngFor="let repo of repos, let last = last; trackBy: trackItem;" [repo]="repo" class="list-item">
+    <!-- Divider -->
+    <mat-divider *ngIf="!last"></mat-divider>
+  </gitbase-repo-item>
+</mat-list>
+<!-- <mat-paginator [length]="reposCount" [pageIndex]="currentPageIndex" [pageSize]="pageSize" [pageSizeOptions]="[100]" (page)="pageChanged($event)"></mat-paginator> -->
