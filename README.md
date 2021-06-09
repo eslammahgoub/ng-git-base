@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/59d9f1f1-ce49-4efb-9cc0-82317c8f09a7/deploy-status)](https://app.netlify.com/sites/git-base/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/920f2c79-4161-4e12-9ff6-5c53c3af7b6a/deploy-status)](https://app.netlify.com/sites/ng-git-base/deploys)
 
 # NgGitBase
 
